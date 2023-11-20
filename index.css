@@ -6,6 +6,7 @@
 :root{
     --main-color1:rgba(28, 43, 255, 0.655);
     --main-color2:rgba(255, 255, 255, 0.999);
+    --background-color: radial-gradient(white,var(--main-color1)); 
 }
 html{
     scroll-behavior:smooth;
@@ -20,23 +21,40 @@ body{
     justify-content:center;
     max-width:100%;
 }
+main{
+  background:var(--background-color);
+}
 /* Style the navigation menu */
-.navbar {
+#navbar {
     overflow: hidden;
     background-color:var(--main-color1);
     position: relative;
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
+    
+    
   }
   
   /* Hide the links inside the navigation menu (except for logo/home) */
-  .navbar  #navlinks{
+  #navbar  #navlinks{
     display: none;
   }
+  #navlinks{
+    font-weight:bold;
+  }
+  .navlinks__items:hover{
+    color:var(--main-color1);
+    background:var(--main-color2);
+    margin-bottom:2px;
+    
+
+  }
+  .sticky{
+    position:fixed;
+
+  }
+  
   
   /* Style navigation menu links */
-  .navbar a {
+  #navbar a {
     color:var(--main-color2);
     padding: 14px 16px;
     text-decoration: none;
@@ -48,13 +66,12 @@ body{
   }
   
   /* Style the hamburger menu */
-  .navbar a.icon {
-    background: black;
+  #navbar a.icon {
     display: block;
     position: absolute;
     right: 0;
     top: 0;
-    font: size 100px;
+    font-size:40px;
   }
   
   /* Add a white background color on mouse-over */
@@ -63,21 +80,25 @@ body{
   }
   
   /* Style the active link (or home/logo) */
-  .active {
+  /*.logo {
     background-color: #04AA6D;
     color: white;
   }
+  */
 
   /*Style body */
+  
   body{
     font-family:'Courier New', Courier, monospace;
+    
 
   }
   
-  h1{
+  .logo{
     font-size:6vh;
     
   }
+  /*the welcome style*/
 
   .welcome{
     display:flex;
@@ -86,6 +107,11 @@ body{
     align-items:center;
     width:100%;
     min-height:50vh;
+    background-image:radial-gradient(white,var(--main-color1));
+    padding:0px;
+    margin:auto;
+    max-width:1000px;
+
     
   }
     
@@ -93,13 +119,20 @@ body{
    text-align:center;
    margin:10px;
    padding:20px;
+   max-width:90%;
+   background:white;
+   border-radius:10px;
   }
-  .header{
+  #header{
     white-space: nowrap;
     text-align:center;
-    overflow-wrap: break-word;
-    margin-bottom:30px;
+    overflow-wrap: normal;
+    margin-bottom:20px;
+    margin-top:30px;
 
+  }
+  #header h1{
+    font-size:6vh;
   }
   .instructor{
     width:100%;
@@ -107,10 +140,38 @@ body{
 
   }
 
+  /*The instructor style 
+  source:W3 schools*/
+  .card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    max-width:300px;
+    margin:auto;
+    text-align:center;
+  }
+
+  .title{
+    color:grey;
+    font-size:18px;
+
+  
+  }
+
+  a{
+    text-decoration:none;
+    font-size:22px;
+    color:black;
+  }
+  .card__container{
+    background:var(--main-color1);
+  }
+
+  
+
   /*@media*/
-  @media screen and (max-width: 416px)
+  @media screen and (max-width: 430px)
   {
-.header{
+#header{
+    inline-size:min-content;
     font-size:2vh;
 }
   }
