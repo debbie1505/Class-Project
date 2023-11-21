@@ -1,4 +1,4 @@
-/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+//Toggle between showing nav list and display none//
 function myFunction() {
     var x = document.getElementById("navlinks");
     if (x.style.display === "block") {
@@ -18,11 +18,9 @@ window.onload = function typeWriter() {
     i++;
     setTimeout(typeWriter, speed);
   }
-}
-
+};
 //when the user scrolls the page,execute myFunction
-window.onScroll = function() {myFunction()};
-
+window.onScroll = function () { myFunction(); };
 //Get the navbar
 var navbar = document.getElementById("navbar");
 
@@ -30,13 +28,13 @@ var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
 
 //Add the sticky class to the navbar when you reach its scroll position. Remove sticky when you leave the scroll position
-function myFunction(){
-  if(window.pageYOffset >= sticky){
-    navbar.classList.add("sticky")
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
   }
-  else{
-    navbar.classList.remove("sticky")
+  else {
+    navbar.classList.remove("sticky");
   }
-  }
-}
+  }  
+
   
