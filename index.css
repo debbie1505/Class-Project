@@ -20,88 +20,43 @@ body{
     flex-direction:column;
     justify-content:space-around;
     max-width:100%;
+    font-family:'Courier New', Courier, monospace;
+    
 
 
 }
 main{
   background:var(--background-color);
 }
-/* Style the navigation menu */
-#navbar {
-    overflow: hidden;
-    background-color:var(--main-color1);
-    position: relative;
+
+  
+  
+  /* nav bar style*/
+  .navitems{
     display:flex;
-    align-items: center;
-    
-    
-  }
-  
-  /* Hide the links inside the navigation menu (except for logo/home) */
-    #navlinks{
-    display: none;
-    font-weight:bold;
-  }
-
-  .navlinks__items:hover{
-    color:var(--main-color1);
-    background:var(--main-color2);
-    margin-bottom:2px;
-    
+    justify-content:space-around;
+    flex-direction:row;
 
   }
-  /*make the nav bar sticky */
-  .sticky{
-    position:fixed;
-
-  }
-  
-  
-  /* Style navigation menu links */
-  #navbar a {
-    color:var(--main-color2);
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-  }
-  li{
-    list-style: none;
-  }
-  
-  /* Style the hamburger menu */
-  #navbar a.icon {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size:40px;
-  }
-  
-  /* Add a white background color on mouse-over */
-  .logo i:hover {
-    transform: scale(1.5);
-  }
-  
-  /* Style the active link (or home/logo) */
-  /*.logo {
-    background-color: #04AA6D;
-    color: white;
-  }
-  */
-
-  /*Style body */
-  
-  body{
-    font-family:'Courier New', Courier, monospace;
-    
-
-  }
-  
-  .logo{
-    font-size:6vh;
+  .icon{
+    display:none;
     
   }
+#navlinks {
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+}
+  #navlinks li{
+    list-style-type:none;
+
+  }
+
+  #navlinks a{
+text-decoration:none;
+  }
+  
+  
   /*the welcome style*/
 
   .welcome{
@@ -192,6 +147,20 @@ main{
     margin:15px;
   }
 
+  footer{
+    background-color:rgba(32, 59, 232, 0.858);
+    text-align:center;
+    font-weight:bolder;
+    color:white;
+    padding:10px;
+    min-height:100px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+  }
+
   
 
   /*@media for smaller screen*/
@@ -199,15 +168,95 @@ main{
 
   
 
-  @media screen and (min-width:568px)
+  @media screen and (max-width:568px)
   {
-    .icon{
-        display:none;
+    #navbar a {
+      color:var(--main-color2);
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      display: block;
     }
+    li{
+      list-style: none;
+    }
+    
+    /* Style the hamburger menu */
+    #navbar a.icon {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size:40px;
+    }
+    
+    /* Add a white background color on mouse-over */
+    .logo i:hover {
+      transform: scale(1.5);
+    }
+    
+    /* Style the active link (or home/logo) */
+    /*.logo {
+      background-color: #04AA6D;
+      color: white;
+    }
+    */
+  
+    
+    .logo{
+      font-size:6vh;
+      
+    }
+    /* Style the navigation menu */
+#navbar {
+  overflow: hidden;
+  background-color:var(--main-color1);
+  position: relative;
+  
+  
+  
+  
+  
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+  #navlinks{
+  display: none;
+  font-weight:bold;
+}
+
+.navlinks__items:hover{
+  color:var(--main-color1);
+  background:var(--main-color2);
+  margin-bottom:2px;
+  
+
+}
   }
     
   /*@media for medium size screen*/
-  /*@media for larger size screen */
+  @media screen and (min-width:768px)
+  {
+    .icon i{
+      display:none;
+    }
+
+    #navlinks div{
+      position:fixed;
+
+    }
+
+  }
+  /*@media for large size screen */
+  @media screen and ( min-width:992px)
+  {
+
+  }
+  @media screen and (min-width:1200px)
+  {
+
+  }
+
 
   
   
