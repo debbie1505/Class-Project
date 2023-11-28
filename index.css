@@ -1,13 +1,19 @@
+/* || RESET  ||*/
+
 *{
     margin:0px;
     padding:0px;
     box-sizing:border-box
 }
+
+/* || ROOT VARIABLES || */
 :root{
     --main-color1:rgba(28, 43, 255, 0.655);
     --main-color2:rgba(255, 255, 255, 0.999);
     --background-color: radial-gradient(white,var(--main-color1)); 
 }
+
+/* GENERAL STYLING */
 html{
     scroll-behavior:smooth;
 }
@@ -29,35 +35,72 @@ main{
   background:var(--background-color);
 }
 
-  
-  
-  /* nav bar style*/
-  .navitems{
-    display:flex;
-    justify-content:space-around;
-    flex-direction:row;
-
-  }
-  .icon{
-    display:none;
-    
-  }
-#navlinks {
-  display:flex;
-  flex-direction:row;
-  justify-content:space-between;
+/* || NAVBAR */
+#navbar a {
+  color:var(--main-color2);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
 }
-  #navlinks li{
-    list-style-type:none;
+li{
+  list-style: none;
+}
 
-  }
+/* Style the hamburger menu */
+#navbar a.icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size:40px;
+}
 
-  #navlinks a{
-text-decoration:none;
-  }
+/* Add a white background color on mouse-over */
+.logo i:hover {
+  transform: scale(1.5);
+}
+
+/* Style the active link (or home/logo) */
+/*.logo {
+  background-color: #04AA6D;
+  color: white;
+}
+*/
+
+
+.logo{
+  font-size:6vh;
   
+}
+/* Style the navigation menu */
+#navbar {
+overflow: hidden;
+background-color:var(--main-color1);
+position: relative;
+
+
+
+
+
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+#navlinks{
+display: none;
+font-weight:bold;
+}
+
+.navlinks__items:hover{
+color:var(--main-color1);
+background:var(--main-color2);
+margin-bottom:2px;
+
+
+}
+
   
-  /*the welcome style*/
+  /* || WELCOME STYLING(DEFAULT) || */
 
   .welcome{
     display:flex;
@@ -74,14 +117,7 @@ text-decoration:none;
     
   }
     
-  .paragraph{
-   text-align:center;
-   margin:10px;
-   padding:20px;
-   max-width:90%;
-   background:white;
-   border-radius:10px;
-  }
+  
   #header{
     white-space: nowrap;
     text-align:center;
@@ -99,8 +135,7 @@ text-decoration:none;
 
   }
 
-  /*The instructor style 
-  source:W3 schools*/
+  /* || THE INSTRUCTOR CARD - SOURCE:W3SCHOOL ||*/
   .card{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     max-width:90%;
@@ -163,94 +198,121 @@ text-decoration:none;
 
   
 
-  /*@media for smaller screen*/
+  /* || @MEDIA SMALL SIZE*/
   
+  @media screen and (max-width:568px){
+    
+  
+    #navbar{
+      display:flex;
+      justify-content:space-between;
+    }
+    .welcome{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      width:100%;
+      min-height:50vh;
+      padding:0px;
+      margin:auto;
+      max-width:1000px;
+      border-radius:20px;
 
   
-
-  @media screen and (max-width:568px)
-  {
-    #navbar a {
-      color:var(--main-color2);
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 17px;
-      display: block;
-    }
-    li{
-      list-style: none;
-    }
-    
-    /* Style the hamburger menu */
-    #navbar a.icon {
-      display: block;
-      position: absolute;
-      right: 0;
-      top: 0;
-      font-size:40px;
-    }
-    
-    /* Add a white background color on mouse-over */
-    .logo i:hover {
-      transform: scale(1.5);
-    }
-    
-    /* Style the active link (or home/logo) */
-    /*.logo {
-      background-color: #04AA6D;
-      color: white;
-    }
-    */
-  
-    
-    .logo{
-      font-size:6vh;
       
     }
-    /* Style the navigation menu */
-#navbar {
-  overflow: hidden;
-  background-color:var(--main-color1);
-  position: relative;
-  
-  
-  
-  
-  
-}
+    .welcome .paragraph{
+      text-align:center;
+      margin:10px;
+      padding:20px;
+      max-width:90%;
+      background:white;
+      border-radius:10px;
+     }
+      
 
-/* Hide the links inside the navigation menu (except for logo/home) */
-  #navlinks{
-  display: none;
-  font-weight:bold;
-}
-
-.navlinks__items:hover{
-  color:var(--main-color1);
-  background:var(--main-color2);
-  margin-bottom:2px;
   
-
-}
   }
     
-  /*@media for medium size screen*/
+  /*|| @MEDIA MEDIUM SIZE*/
   @media screen and (min-width:768px)
   {
+    
+    .welcome{
+      min-height:75vh;
+      display:flex;
+      position:relative;
+      flex-grow:1;
+      
+    }
+
+    .welcome #header{
+      display:absolute;
+      top:0%;
+      font-size:7vh;
+      
+    }
+
+    .paragraph{
+      
+    }
+
+    
+
+  }
+  /*|| @MEDIA LARGE */
+  @media screen and ( min-width:992px)
+  {
+    #navbar{
+      background:var(--main-color1);
+    }
+    .navitems{
+      display:flex;
+      justify-content:space-between;
+      flex-direction:row;
+  
+    }
+    .navitems a{
+      color:white;
+    }
+    
+  
+  #navlinks {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+  }
+    #navlinks li{
+      list-style-type:none;
+  
+    }
+  
+    #navlinks a{
+  text-decoration:none;
+    }
+
     .icon i{
       display:none;
     }
 
-    #navlinks div{
-      position:fixed;
-
+    .welcome{
+      min-height:100vh;
+      position:relative;
+      display:flex;
+      justify-content:center;
+    }
+    #header{
+      font-size:10vh;
+      margin-top:-100px;
+      margin-bottom:30px;
     }
 
-  }
-  /*@media for large size screen */
-  @media screen and ( min-width:992px)
-  {
-
+.card__container{
+  display:none;
+}
+  
+    
   }
   @media screen and (min-width:1200px)
   {

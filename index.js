@@ -1,6 +1,6 @@
 //Toggle between showing nav list and display none//
 function myFunction() {
-  if (window.innerWidth <= 568){
+  if (window.innerWidth <= 768){
     var x = document.getElementById("navlinks");
     if (x.style.display === "block") {
       x.style.display = "none";
