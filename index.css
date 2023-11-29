@@ -89,14 +89,33 @@ position: relative;
 #navlinks{
 display: none;
 font-weight:bold;
+cursor:pointer;
 }
 
 .navlinks__items:hover{
-color:var(--main-color1);
+color:black;
 background:var(--main-color2);
 margin-bottom:2px;
 
 
+}
+.dropdown{
+  position:relative;
+  display: inline-block;
+}
+
+.dropdown-content{
+  display:none;
+  position:absolute;
+  min-width:160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0,2);
+  padding:12px 16px;
+  z-index: 100;
+  background:white;
+}
+
+ .dropdown:hover .dropdown-content{
+  display:block;
 }
 
   
@@ -231,38 +250,49 @@ margin-bottom:2px;
       border-radius:10px;
      }
       
-
-  
   }
-    
+
+   
   /*|| @MEDIA MEDIUM SIZE*/
   @media screen and (min-width:768px)
   {
     
     .welcome{
       min-height:75vh;
-      display:flex;
+      
       position:relative;
       flex-grow:1;
+      max-width:100%;
+      top:20%;
+      
+      
+    }
+
+    .paragraph{
+      font-weight:bold;
+      line-height: 30px;
+      margin-top:-50px;
       
     }
 
     .welcome #header{
       display:absolute;
       top:0%;
-      font-size:7vh;
-      
+      font-size:6vh;
+      text-shadow:2px 2px;
+      margin-bottom:150px;
     }
+
 
     .paragraph{
-      
+      word-break:break-all;
+      padding:30px;
     }
 
-    
 
   }
   /*|| @MEDIA LARGE */
-  @media screen and ( min-width:992px)
+  @media screen and ( min-width:1024px)
   {
     #navbar{
       background:var(--main-color1);
@@ -301,10 +331,11 @@ margin-bottom:2px;
       position:relative;
       display:flex;
       justify-content:center;
-      margin-left:30px;
       margin-right:30px;
       margin-top:auto;
       margin-bottom:auto;
+      width:100%;
+      padding:30px;
     }
     #header{
       font-size:10vh;
@@ -312,17 +343,40 @@ margin-bottom:2px;
       margin-bottom:30px;
     }
 
-.card__container{
-  display:none;
-}
+
+
+
   
     
   }
-  @media screen and (min-width:1200px)
+
+  /* || @MEDIA FOR XL || */
+  @media screen and (min-width:1440px)
   {
+.paragraph{
+  font-size:30px;
+  line-height:normal;
+}
+
+#navlinks .navlinks__items{
+  font-size:30px;
+}
+
+.navitems a .logo{
+  font-size:1000px;
+  flex-grow:1;
+}
+
+.navitems{
+  height:150px;
+  display:flex;
+  align-items:center;
+  
+}
+
+#navlinks{
+  flex-grow:0.3;
+  margin-right:30px;
+}
 
   }
-
-
-  
-  

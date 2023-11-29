@@ -13,16 +13,28 @@
     <main>
     
     <!--This is the navigation html-->
-    <header id="navbar">
+    <ul id="navbar">
         <!--The Logo-->
         <div class="navitems">
         <div><a class="logo" href="#index.html"><h1>CISS 100</h1></a></div>
         
         <div id="navlinks">
             <li><a href="index.html" class="navlinks__items">Home</a></li>
-            <li> <a href="units.html" class="navlinks__items" >Units</a></li>
-            <li> <a href="linux-labs.html" class="navlinks__items">Linux Labs</a></li>
-            <li> <a href="resources" class="navlinks__items">Resources</a></li>
+            <div class="dropdown">
+            <li> <a href="#" class="navlinks__items" >Units</a></li>
+            <div class="dropdown-content">
+                <li> <a href="#"> Data Representation</a></li>
+                <li> <a href="#"> Hardware</a></li>
+                <li> <a href="#"> Networking</a></li>
+                <li> <a href="#">Operating Systems</a></li>
+                <li> <a href="#">Web Design</a></li>
+                <li> <a href="#">Security</a></li>
+                <li> <a href="#">Final Project</a></li>
+                
+            </div>
+            </div>
+            <li> <a href="#" class="navlinks__items">Linux Labs</a></li>
+            <li> <a href="#" class="navlinks__items">Resources</a></li>
         </div>
 
         <a href="javascript:void(0);" class="icon" onClick="myFunction()">
