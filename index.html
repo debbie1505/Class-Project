@@ -13,16 +13,16 @@
     <main>
     
     <!--This is the navigation html-->
-    <ul id="navbar">
+    <header id="navbar">
         <!--The Logo-->
         <div class="navitems">
         <div><a class="logo" href="#index.html"><h1>CISS 100</h1></a></div>
         
-        <div id="navlinks">
+        <ul id="navlinks">
             <li><a href="index.html" class="navlinks__items">Home</a></li>
             <div class="dropdown">
             <li> <a href="#" class="navlinks__items" >Units</a></li>
-            <div class="dropdown-content">
+            <ul class="dropdown-content">
                 <li> <a href="#"> Data Representation</a></li>
                 <li> <a href="#"> Hardware</a></li>
                 <li> <a href="#"> Networking</a></li>
@@ -31,17 +31,19 @@
                 <li> <a href="#">Security</a></li>
                 <li> <a href="#">Final Project</a></li>
                 
-            </div>
-            </div>
+            </ul>
+        </div>
             <li> <a href="#" class="navlinks__items">Linux Labs</a></li>
             <li> <a href="#" class="navlinks__items">Resources</a></li>
-        </div>
+    </ul>
 
-        <a href="javascript:void(0);" class="icon" onClick="myFunction()">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
             </a>
         </div>
-        </header>
+    </header>
+
+    
 
     <section class="welcome">
         <div><h1 id="header"></h1></div>
@@ -55,6 +57,21 @@
 
     
 
+    </section>
+
+    <section>
+    <h1 class="units__h1">Units</h1>
+
+    <div class = "units__container">
+
+                <div class="units"><li> <a href="#"> Data Representation</a></li></div>
+                <div class="units"><li> <a href="#"> Hardware</a></li></div>
+                <div class="units"><li> <a href="#"> Networking</a></li></div>
+                <div class="units"><li> <a href="#">Operating Systems</a></li></div>
+                <div class="units"><li> <a href="#">Web Design</a></li></div>
+                <div class="units"><li> <a href="#">Security</a></li></div>
+                <div class="units"><li> <a href="#">Future Computing</a></li></div>
+                </div>
     </section>
 
         <section class="card__container">
