@@ -77,7 +77,6 @@ li{
 /* Style the navigation menu */
 #navbar {
 overflow: hidden;
-background-color:var(--main-color1);
 position: relative;
 
 
