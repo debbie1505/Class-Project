@@ -1,0 +1,581 @@
+/* || RESET  ||*/
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+/* || ROOT VARIABLES || */
+:root{
+    --main-color1:rgba(28, 43, 255, 0.655);
+    --main-color2:rgba(255, 255, 255, 0.999);
+    --background-color: radial-gradient(circle at bottom, black,var(--main-color1)); 
+    --box-shadow:rgba(0,0,0,0.5);
+    --units-bc:rgba(20, 19, 19, 0.716);
+    --body-bc:rgba(176, 6, 176, 0.779);
+}
+
+/* GENERAL STYLING */
+html{
+    scroll-behavior:smooth;
+    
+}
+html, body{
+    
+    overflow-x: hidden;
+}
+body{
+    
+    font-family:'Courier New', Courier, monospace;
+    color:whitesmoke;
+    
+}
+
+.sesh-for-background{
+  background: radial-gradient(circle at bottom, purple, black 100%);
+    height:100%;
+    color:whitesmoke;
+
+}
+    .space {
+      background: rgba(128, 0, 128, 0.1) center / 200px 200px round;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index:11;
+      height:100vh;
+      
+    }
+    
+    .stars1 {
+      background-image:
+        radial-gradient(
+          1px 1px at 25px 5px, 
+          white, 
+          rgba(255, 255, 255, 0)
+        ),
+        radial-gradient(
+          1px 1px at 50px 25px, 
+          white, 
+          rgba(255, 255, 255, 0)
+        ),
+        radial-gradient(
+          1px 1px at 125px 20px, 
+          white, 
+          rgba(255, 255, 255, 0)
+        ),
+        radial-gradient(
+          1.5px 1.5px at 50px 75px, 
+          white, 
+          rgba(255, 255, 255, 0)
+        ),
+        radial-gradient(
+          2px 2px at 15px 125px, 
+          white, 
+          rgba(255, 255, 255, 0)
+        ),
+        radial-gradient(
+          2.5px 2.5px at 110px 80px, 
+          white, 
+          rgba(255, 255, 255, 0)
+        );
+
+        
+    }
+    
+    .stars2 {
+      background-image:
+        radial-gradient(
+          1px 1px at 75px 125px, 
+          white, 
+          rgba(255, 255, 255, 0)
+        ),
+        radial-gradient(
+          1px 1px at 100px 75px, 
+          white, 
+          rgba(255, 255, 255, 0)
+        ),
+        radial-gradient(
+          1.5px 1.5px at 199px 100px, 
+          white, 
+          rgba(255, 255, 255, 0)
+        ),
+        radial-gradient(
+          2px 2px at 20px 50px, 
+          white, 
+          rgba(255, 255, 255, 0)
+        ),
+        radial-gradient(
+          2.5px 2.5px at 100px 5px, 
+          white, 
+          rgba(255, 255, 255, 0)
+        ),
+        radial-gradient(
+          2.5px 2.5px at 5px 5px, 
+          white, 
+          rgba(255, 255, 255, 0)
+        );
+
+       
+    }
+    
+        .stars3 {
+      background-image:
+        radial-gradient(
+          1px 1px at 10px 10px, 
+          white, 
+          rgba(255, 255, 255, 0)
+        ),
+        radial-gradient(
+          1px 1px at 150px 150px, 
+          white, 
+          rgba(255, 255, 255, 0)
+        ),
+        radial-gradient(
+          1.5px 1.5px at 60px 170px, 
+          white, 
+          rgba(255, 255, 255, 0)
+        ),
+        radial-gradient(
+          1.5px 1.5px at 175px 180px, 
+          white, 
+          rgba(255, 255, 255, 0)
+        ),
+        radial-gradient(
+          2px 2px at 195px 95px, 
+          white, 
+          rgba(255, 255, 255, 0)
+        ),
+        radial-gradient(
+          2.5px 2.5px at 95px 145px, 
+          white, 
+          rgba(255, 255, 255, 0)
+        );
+        height:100%;/* need help with this. the background is 
+        disapearing and reapearing */
+
+        
+    }
+    
+    /* || NAVBAR */
+    #navbar a {
+      color:var(--main-color2);
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      display: block;
+    }
+    li{
+      list-style: none;
+    }
+    
+    /* Style the hamburger menu */
+    #navbar a.icon {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size:40px;
+    }
+    
+    /* Add a white background color on mouse-over */
+    .logo:hover {
+      transform: scale(1.5);
+    }
+    
+    /* Style the active link (or home/logo) */
+    /*.logo {
+      background-color: #04AA6D;
+      color: white;
+    }
+    */
+    
+    
+    .logo{
+      font-size:6vh;
+      
+    }
+    /* Style the navigation menu */
+    #navbar {
+    overflow: hidden;
+    position: relative;
+    
+    
+    
+    
+    
+    }
+    
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    #navlinks{
+    display: none;
+    font-weight:bold;
+    cursor:pointer;
+    }
+    
+    #navitems .navlinks__items:hover{
+    color:black;
+    background:var(--main-color2);
+    margin-bottom:2px;
+    
+    
+    }
+    .dropdown{
+      position:relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content{
+      display:none;
+      position:absolute;
+      width:100%;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0,2);
+      padding:12px 16px;
+      z-index: 1;
+      color:black;
+      
+    }
+    
+    .dropdown-content a{
+      color:black;
+    }
+     .dropdown:hover .dropdown-content{
+      display:block;
+      
+    }
+    
+    
+      
+      /* || WELCOME STYLING(DEFAULT) || */
+    
+      .welcome{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        width:100%;
+        min-height:50vh;
+        background-image:var(--background-image);
+        padding:0px;
+        margin:auto;
+        max-width:1000px;
+    
+        
+      }
+        
+      
+      #header{
+        white-space: nowrap;
+        text-align:center;
+        overflow-wrap: normal;
+        margin-bottom:20px;
+        margin-top:30px;
+    
+      }
+      #header h1{
+        font-size:6vh;
+      }
+      .instructor{
+        width:100%;
+        height:50vh;
+    
+      }
+    
+      /* || THE UNITS GRID || */
+    .grid__h1{
+      text-align:center;
+      background:var(--units-bc);
+      padding:20px;
+      color:white;
+      font-size:30px;
+      font-weight:bolder;
+    }
+      .grid__container{
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+        grid-auto-rows:200px;
+        padding:10px;
+        margin-bottom:40px;
+        margin:auto;
+        width:90%;
+        align-content:center;
+        justify-content: center;
+    gap:40px 40px;
+    box-shadow: 7px 7px 5px var(--box-shadow);
+    border-radius:10px;
+    padding:50px;
+    margin-top:50px;
+    margin-bottom:200px;
+    z-index:9;
+    
+    
+      }
+    
+      .grid{
+        background-color:var(--units-bc);
+        color:black;
+        box-shadow:7px 7px 5px var(--box-shadow);
+        text-align:center;
+        font-size:30px;
+        width:100%;
+        border-radius:10px;
+        z-index:9;
+      }
+
+main{
+  display:flex;
+    
+    flex-direction:column;
+    justify-content:space-around;
+    max-width:100%;
+}
+/* || UNIVERSE BACKGROUND || Source: Jen Saxena */ 
+
+
+
+
+  /* || THE INSTRUCTOR CARD - SOURCE:W3SCHOOL ||*/
+  .card{
+    box-shadow: 7px 7px 8px var(--box-shadow);
+    max-width:90%;
+    margin:auto;
+    text-align:center;
+    z-index:9;
+    background-color:var(--units-bc);
+    border-radius:10px;
+    padding:30px;
+  }
+
+  .title{
+    color:grey;
+    font-size:18px;
+
+  
+  }
+
+  a{
+    text-decoration:none;
+    font-size:22px;
+    color:white;
+  }
+  .card__container{
+    min-height:100vh;
+    margin-bottom:40px;
+    display:flex;
+    align-items:center;
+   
+  }
+
+  .email{
+    word-break: break-all;
+  }
+
+  
+
+  img{
+    margin:auto;
+  }
+  .subtitle{
+    margin-bottom:20px;
+  }
+  .instructor__socials{
+    margin:15px;
+  }
+
+  footer{
+    background-color:var(--units-bc);
+    text-align:center;
+    font-weight:bolder;
+    color:white;
+    padding:10px;
+    min-height:100px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+  }
+
+  
+
+  /* || @MEDIA SMALL SIZE*/
+  
+  @media screen and (max-width:568px){
+    
+  
+    #navbar{
+      display:flex;
+      justify-content:space-between;
+    }
+
+    .navlinks__items:hover{
+      color:black;
+      background-color: aliceblue;
+    }
+    .welcome{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      width:100%;
+      min-height:50vh;
+      padding:0px;
+      margin:auto;
+      max-width:1000px;
+      border-radius:20px;
+
+  
+      
+    }
+    .welcome .paragraph{
+      text-align:center;
+      margin:10px;
+      padding:20px;
+      max-width:90%;
+      
+     }
+      
+  }
+
+   
+  /*|| @MEDIA MEDIUM SIZE*/
+  @media screen and (min-width:768px)
+  {
+    
+    .navlinks__items:hover{
+      color:black;
+      background-color: aliceblue;
+    }
+    .welcome{
+      min-height:75vh;
+      
+      position:relative;
+      flex-grow:1;
+      max-width:100%;
+      top:20%;
+      
+      
+    }
+
+    .paragraph{
+      font-weight:bold;
+      line-height: 30px;
+      margin-top:-50px;
+      
+    }
+
+    .welcome #header{
+      display:absolute;
+      top:0%;
+      font-size:6vh;
+      text-shadow:2px 2px;
+      margin-bottom:150px;
+    }
+
+
+    .paragraph{
+      word-break:break-all;
+      padding:30px;
+    }
+
+
+  }
+  /*|| @MEDIA LARGE */
+  @media screen and ( min-width:1024px)
+  {
+    .navlinks__items:hover{
+      color:black;
+      background-color: aliceblue;
+    }
+
+    .navitems{
+      display:flex;
+      justify-content:space-between;
+      flex-direction:row;
+  
+    }
+    .navitems a{
+      color:white;
+    }
+    
+  
+  #navlinks {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+  }
+    #navlinks li{
+      list-style-type:none;
+  
+    }
+  
+    #navlinks a{
+  text-decoration:none;
+    }
+
+    .icon i{
+      display:none;
+    }
+
+    .welcome{
+      min-height:100vh;
+      position:relative;
+      display:flex;
+      justify-content:center;
+      margin-right:30px;
+      margin-top:auto;
+      margin-bottom:auto;
+      width:100%;
+      padding:30px;
+    }
+    #header{
+      font-size:10vh;
+      margin-top:-100px;
+      margin-bottom:30px;
+    }
+
+
+
+
+  
+    
+  }
+
+  /* || @MEDIA FOR XL || */
+  @media screen and (min-width:1440px)
+  {
+.paragraph{
+  font-size:30px;
+  line-height:normal;
+}
+
+#navlinks .navlinks__items{
+  font-size:30px;
+}
+
+.navitems a .logo{
+  font-size:1000px;
+  flex-grow:1;
+}
+
+.navitems{
+  height:100px;
+  display:flex;
+  align-items:center;
+  
+}
+
+#navlinks{
+  flex-grow:0.3;
+  margin-right:30px;
+}
+
+a .navlinks__items:hover{
+  color:black;
+  background-color: aliceblue;
+}
+
+  }
