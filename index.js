@@ -16,18 +16,27 @@ var speed = 60; /* The speed/duration of the effect in milliseconds */
 
 window.onload = function typeWriter() {
   if (i < txt.length) {
-    document.getElementById("header").innerHTML += txt.charAt(i);
+    document.getElementById("header").textContent = txt.substring(0, i + 1);
     i++;
     setTimeout(typeWriter, speed);
   }
 };
-//when the user scrolls the page,execute myFunction
-window.onScroll = function () { myFunction(); };
-//Get the navbar
-var navbar = document.getElementById("navbar");
 
-//Get the offset position of the navbar
+// JavaScript for sticky navbar
+window.onscroll = function () {
+  stickyNavbar();
+};
+
+var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
 
+function stickyNavbar() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
 
-  
+
+
