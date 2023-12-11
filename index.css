@@ -15,6 +15,7 @@
     --units-bc:rgba(20, 19, 19, 0.716);
     --body-bc:rgba(176, 6, 176, 0.779);
     --background-image: radial-gradient(circle at bottom, black, var(--main-color1));
+    --nf-bc:rgb(211, 43, 226);
 }
 
 /* GENERAL STYLING */
@@ -191,23 +192,41 @@ body{
     /* Add a white background color on mouse-over */
     .logo:hover {
       transform: scale(1.1);
+      
     }
     
     
     .logo{
       font-size:6vh;
+      transition: transform 0.5s ease;
       
     }
-    /* Style the navigation menu */
+    /* Style the nav bar */
     #navbar {
     overflow: hidden;
-    position: relative;
-    
-    
-    
+    position:fixed;
+    top:0;
+    width:100%;
+    transition:top 0.3s;
     
     
     }
+
+    #navbar.scroll{
+      background-color: var(--nf-bc);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index:100;
+    }
+
+    #navbar.sticky{
+    position: fixed;
+    top:0;
+    width:100%;
+    
+    
+
+    }
+
     
     /* Hide the links inside the navigation menu (except for logo/home) */
     #navlinks{
@@ -247,18 +266,8 @@ body{
       
     }
     /* Add these styles for sticky navbar */
-#navbar {
-  overflow: hidden;
-  position: sticky;
-  top: 0; /* Adjust this value based on your design */
-  background-color: var(--background-color); /* Add the desired background color */
-  z-index: 100; /* Adjust the z-index as needed */
-}
 
 /* Add a shadow to the sticky navbar for better visibility */
-#navbar.sticky {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust the shadow properties as needed */
-}
 
     
     
@@ -399,7 +408,7 @@ main{
     font-size:22px;
     color:white;
   }
-  .card__container{
+  #card__container{
     min-height:100vh;
     display:flex;
     align-items:center;
@@ -423,7 +432,7 @@ main{
   }
 
   footer{
-    background-color:var(--units-bc);
+    background-color:var(--nf-bc);
     text-align:center;
     font-weight:bolder;
     color:white;
@@ -480,15 +489,18 @@ main{
 
    
   /*|| @MEDIA MEDIUM SIZE*/
-  @media screen and (min-width:768px)
+  @media screen and (min-width:568px)
   {
-    
+    .logo:hover {
+      transform: scale(1.01);
+      
+    }
     .navlinks__items:hover{
       color:black;
       background-color: aliceblue;
     }
     .welcome{
-      min-height:75vh;
+      min-height:100vh;
       
       position:relative;
       flex-grow:1;
@@ -519,11 +531,20 @@ main{
       padding:30px;
     }
 
-
+.grid__container{
+  grid-template-columns: repeat(2, minmax(200px,300px));
+}
   }
   /*|| @MEDIA LARGE */
   @media screen and ( min-width:1024px)
   {
+    .grid__container{
+      grid-template-columns: repeat(4, minmax(200px,500px));
+    }
+
+    #navbar{
+      margin-bottom:200px;
+    }
     .navlinks__items:hover{
       color:black;
       background-color: aliceblue;
@@ -574,7 +595,9 @@ main{
       margin-top:-100px;
       margin-bottom:30px;
     }
-
+.logo{
+  font-size:10vh;
+}
 
 
 
