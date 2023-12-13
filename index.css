@@ -15,7 +15,7 @@
     --units-bc:rgba(20, 19, 19, 0.716);
     --body-bc:rgba(176, 6, 176, 0.779);
     --background-image: radial-gradient(circle at bottom, black, var(--main-color1));
-    --nf-bc:rgb(211, 43, 226);
+    --nf-bc:rgb(198, 39, 212);
 }
 
 /* GENERAL STYLING */
@@ -32,6 +32,7 @@ body{
     font-family:'Courier New', Courier, monospace;
     color:whitesmoke;
     position:relative;
+    background-color:alice-blue;
 }
 
 .sesh-for-background{
@@ -158,10 +159,9 @@ body{
           rgba(255, 255, 255, 0)
         );
         height:100%;/* need help with this. the background is 
-        disapearing and reapearing */
-
-        
-    }
+        disapearing and reapearing }
+        */}
+    
 
     .welcome, #navbar, #units, #linux__container, .card__container{
       position:relative;
@@ -284,6 +284,7 @@ body{
         padding:0px;
         margin:auto;
         max-width:1000px;
+        
     
         
       }
@@ -608,8 +609,12 @@ main{
   /* || @MEDIA FOR XL || */
   @media screen and (min-width:1440px)
   {
+
+    #navbar{
+      margin-bottom:10px;
+    }
 .paragraph{
-  font-size:30px;
+  font-size:20px;
   line-height:normal;
 }
 
@@ -623,7 +628,7 @@ main{
 }
 
 .navitems{
-  height:100px;
+  height:70px;
   display:flex;
   align-items:center;
   
